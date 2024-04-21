@@ -19,6 +19,7 @@ pub fn declarando_constantes_globais() {
 }
 
 pub fn definindo_escopos() {
+    println!("\n");
     println!("Escopos sao blocos de codigo delimitados por '{{' e '}}', quando a execucao do bloco termina, todos os recursos definidos nele, sao desalocados.");
     
     let mut variavel_a : i32 = 123;
@@ -35,20 +36,22 @@ pub fn definindo_escopos() {
     variavel_a = variavel_a + 1;
 
     println!("variavel_a, apos receber adicao de 1 = {}", variavel_a);
-
+    print!("\n");
+    println!("===============================================");
 }
 
 pub fn definindo_funcao() {
-    println!("\nDefinindo uma funcao em Rust: ");
-    println!("\n   fn nome_da_funcao ( param1 : tipo, param2 : tipo, ... paramN : tipo) -> tipo do retorno '{{' e '}}' ");
-    println!("\n  Ex.: ");
-    println!("\n       fn adicao(a : i32, b : i32) -> i32 '{{' a + b '}}' ");
-    println!("\n   Ou  fn adicao(a : i32, b : i32) -> i32 '{{' return a + b; '}}' ");
- 
+    print!("\n");
+    println!("Definindo uma funcao em Rust: ");
+    println!("  fn nome_da_funcao ( param1 : tipo, param2 : tipo, ... paramN : tipo) -> tipo do retorno '{{' e '}}' ");
+    println!("  Ex.: ");
+    println!("       fn adicao(a : i32, b : i32) -> i32 '{{' a + b '}}' ");
+    println!("   Ou  fn adicao(a : i32, b : i32) -> i32 '{{' return a + b; '}}' "); 
     print!("\n");
     println!("Resultado da funcao adicao(2, 2) = {}", adicao(2, 2));
-
     print!("\n");
+    println!("===============================================");
+
     equacao_2_grau(2.0, 3.0, -5.0);
 }
 
@@ -64,25 +67,24 @@ pub fn equacao_2_grau(a: f64, b : f64, c : f64) {
     let resultado_x_1 = (-b + resultado_raiz_de_delta) / ( 2.0 * a );
     let resultado_x_2 = (-b - resultado_raiz_de_delta) / ( 2.0 * a ); 
 
-    print!("\n");
+    println!("\n");
     println!("Resultado da funcao equacao_2_grau(2.0, 3.0, -5.0) ");
-    print!("\n");
+    println!(" ");
     println!("Resolvendo equacao 2 grau ({}x^2 + {}x + {} = 0)", a, b, c);
 
-    print!("\n");
+    println!(" ");
     println!("Resultado de Delta = b^2 - 4 * a * c = {}^2 - 4 * {} * {} = {}", b, a, c, resultado_delta);
-    print!("\n");
+    println!(" ");
     println!("Resultado da Raiz de delta = SQRT({}) = {}", resultado_delta, resultado_raiz_de_delta);
-    print!("\n");
+    println!(" ");
     println!("X´  = -{} + {} / 2*{} = {}",b, resultado_raiz_de_delta, a, resultado_x_1);
-    print!("\n");
+    println!(" ");
     println!("X´´ = -{} - {} / 2*{} = {}", b, resultado_raiz_de_delta, a, resultado_x_2);
     
-    print!("\n");
+    println!(" ");
     println!("Conjunto Solucao = [{}, {}]", resultado_x_1, resultado_x_2);
-    print!("\n");
-    print!("\n");
-
+    println!(" ");
+    println!("===============================================");
 }
 
 fn delta(a: f64, b : f64, c : f64) -> f64 {
