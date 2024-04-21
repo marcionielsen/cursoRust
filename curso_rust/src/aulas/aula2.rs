@@ -49,8 +49,6 @@ pub fn definindo_funcao() {
     println!("Resultado da funcao adicao(2, 2) = {}", adicao(2, 2));
 
     print!("\n");
-    print!("\n");
-    println!("Resultado da funcao equacao_2_grau(2.0, 3.0, -5.0) \n ");
     equacao_2_grau(2.0, 3.0, -5.0);
 }
 
@@ -59,8 +57,6 @@ fn adicao(a : i32, b : i32) -> i32 {
 }
 
 pub fn equacao_2_grau(a: f64, b : f64, c : f64) {
-    // let mut sinal_b: char = '+';
-    // let mut sinal_c: char = '+';
 
     let resultado_delta = delta(a, b, c);
     let resultado_raiz_de_delta = f64::sqrt(resultado_delta);
@@ -68,36 +64,11 @@ pub fn equacao_2_grau(a: f64, b : f64, c : f64) {
     let resultado_x_1 = (-b + resultado_raiz_de_delta) / ( 2.0 * a );
     let resultado_x_2 = (-b - resultado_raiz_de_delta) / ( 2.0 * a ); 
 
-    // if b > 0.0 {
-    //     sinal_b = '+';
-    // }
+    print!("\n");
+    println!("Resultado da funcao equacao_2_grau(2.0, 3.0, -5.0) ");
+    print!("\n");
+    println!("Resolvendo equacao 2 grau ({}x^2 + {}x + {} = 0)", a, b, c);
 
-    // if b < 0.0 {
-    //     sinal_b = '-';
-    // }
-
-    // if b == 0.0 {
-    //     sinal_b = ' ';
-    // }
-
-    // if c > 0.0 {
-    //     sinal_c = '+';
-    // }
-
-    // if c < 0.0 {
-    //     sinal_c = '-';
-    // }
-
-    if c < 0.0  {
-        println!("Resolvendo equacao 2 grau ({}x^2 + {}x {} = 0)", a, b, c);
-    }
-    if c > 0.0  {
-        println!("Resolvendo equacao 2 grau ({}x^2 + {}x + {} = 0)", a, b, c);
-    }
-    if c == 0.0 {
-       println!("Resolvendo equacao 2 grau ({}x^2 + {}x = 0)", a, b);
-    }
-    
     print!("\n");
     println!("Resultado de Delta = b^2 - 4 * a * c = {}^2 - 4 * {} * {} = {}", b, a, c, resultado_delta);
     print!("\n");
@@ -126,4 +97,37 @@ fn delta(a: f64, b : f64, c : f64) -> f64 {
 
 // X' = -b + raiz(delta) / 2*a
 // X" = -b - raiz(delta) / 2*a
+
+    // let mut sinal_b: char = '+';
+    // let mut sinal_c: char = '+';
+
+    // if b > 0.0 {
+    //     sinal_b = '+';
+    // }
+
+    // if b < 0.0 {
+    //     sinal_b = '-';
+    // }
+
+    // if b == 0.0 {
+    //     sinal_b = ' ';
+    // }
+
+    // if c > 0.0 {
+    //     sinal_c = '+';
+    // }
+
+    // if c < 0.0 {
+    //     sinal_c = '-';
+    // }
+
+    // if c < 0.0  {
+    //     println!("Resolvendo equacao 2 grau ({}x^2 + {}x {} = 0)", a, b, c);
+    // }
+    // if c > 0.0  {
+    //     println!("Resolvendo equacao 2 grau ({}x^2 + {}x + {} = 0)", a, b, c);
+    // }
+    // if c == 0.0 {
+    //    println!("Resolvendo equacao 2 grau ({}x^2 + {}x = 0)", a, b);
+    // }
 
