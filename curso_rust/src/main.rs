@@ -2,6 +2,8 @@ mod aulas;
 
 use aulas::{aula1, aula2, aula3};
 
+use crate::aulas::aula4;
+
 fn main() {
 
     println!(" ");
@@ -36,4 +38,17 @@ fn main() {
     println!("#########################################################");
     println!(" ");
 
+    aula4::conceito_ownership();
+    aula4::conceito_referencia_borrowing();
+
+    aula4::conceito_pattern_matching();
+    
+    aula4::tratamento_erros_panic();
+    aula4::tratamento_erros_sucesso();
+    aula4::tratamento_erros_erro();
+    
+    println!(" ");
+    println!("#########################################################");
+    println!(" ");
+    
 }
