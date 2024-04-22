@@ -2,7 +2,7 @@ mod aulas;
 
 use aulas::{aula1, aula2, aula3};
 
-use crate::aulas::aula4;
+use crate::aulas::{aula4, aula5};
 
 fn main() {
 
@@ -50,5 +50,11 @@ fn main() {
     println!(" ");
     println!("#########################################################");
     println!(" ");
-    
+
+    aula5::ferramenta_cargo();
+        
+    println!(" ");
+    println!("#########################################################");
+    println!(" ");
+
 }
